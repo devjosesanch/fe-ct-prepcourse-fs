@@ -5,12 +5,13 @@ function obtenerMayor(x, y) {
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:
-   if (x > y);{
+   if (x > y) {
       return x;
    } else {
       return y;
    }
 }
+console.log(obtenerMayor(1 , 2));
 
 function mayoriaDeEdad(edad) {
    // Determinar si la persona puede ingresar al evento según su edad.
@@ -23,8 +24,9 @@ function mayoriaDeEdad(edad) {
       return false;
    }
 }
-let edadPersona = 20;
-console.log(mayoriaDeEdad(edadPersona));
+let edadPersona1 = 20;
+console.log(mayoriaDeEdad(edadPersona1));
+console.log(mayoriaDeEdad(17));
 
 function conection(status) {
    // El argumento "status" representa el estado de conexión de un usuario.
@@ -41,6 +43,9 @@ function conection(status) {
       return "Offline";
   }
 }
+
+console.log(conection(1));
+console.log(conection(6));
 
 function saludo(idioma) {
    // Retornar un saludo en tres diferentes lenguajes:
@@ -87,18 +92,28 @@ function esDiezOCinco(num) {
    // Retornar true si "num" es 10 o 5.
    // De lo contrario, retornar false.
    // Tu código:
+   if (num === 10 || num === 5){
+    return true;
+   } else{
+    return false;
+   }
 }
+console.log(esDiezOCinco(10));
+console.log(esDiezOCinco(4));
 
 function estaEnRango(num) {
    // Retornar true si "num" es menor que 50 y mayor que 20.
    // De lo contrario, retornar false.
    // Tu código:
-   if (num === 10 || num === 5) {
-      return true;
-  } else {
-      return false;
+  if (num < 50 && num > 20){
+    return true;
+  } else{
+    return false;
   }
 }
+
+console.log(estaEnRango(13));
+console.log(estaEnRango(30));
 
 function esEntero(num) {
    // Retornar true si "num" es un entero, ya sea positivo, negativo o cero.
@@ -113,6 +128,8 @@ function esEntero(num) {
       return false;
   }
 }
+console.log(esEntero(-10));
+console.log(esEntero(1.5));
 
 function fizzBuzz(num) {
    // Si "num" es divisible entre 3, retorna "fizz".
@@ -130,6 +147,10 @@ function fizzBuzz(num) {
       return false;
   }
 }
+
+console.log(fizzBuzz(15));
+console.log(fizzBuzz(3));
+console.log(fizzBuzz(2));
 
 function operadoresLogicos(num1, num2, num3) {
    // La función recibe tres números distintos.
@@ -159,16 +180,18 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   if (num < 2) {
-      return false;
-  }
-  for (let i = 2; i < num; i++) {
-      if (num % i === 0) {
-          return false;
-      }
-  }
-  return true;
+   if (num <= 1){
+    return false;
+   } for(let i = 2; i <= Math.sqrt(num); i ++){
+    if (num % i === 0){
+        return false;
+    } 
+   }
+   return true;
 }
+
+console.log(esPrimo(7));
+console.log(esPrimo(15));
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
@@ -191,6 +214,8 @@ function tieneTresDigitos(num) {
       return false;
   }
 }
+console.log(tieneTresDigitos(13));
+console.log(tieneTresDigitos(123));
 
 function doWhile(num) {
    // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
@@ -205,6 +230,7 @@ function doWhile(num) {
    return num;
    
 }
+console.log(doWhile(13));
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
